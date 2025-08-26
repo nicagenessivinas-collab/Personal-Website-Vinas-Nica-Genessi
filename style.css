@@ -1,5 +1,6 @@
+/* ==== Overlapping Hero Styles ==== */
 :root{
-  --bg1:#0e3859;      /* dark teal/blue gradient like your mockup */
+  --bg1:#0e3859;
   --bg2:#0b2536;
   --text:#eaf3f8;
   --muted:#c9dbe6;
@@ -9,11 +10,11 @@
   --primary-2:#0ea5a6;
 }
 
-/* HERO: two columns */
-.hero-overlap{
+/* make sure old .hero rules don't fight this; specificity = .hero.hero-overlap */
+.hero.hero-overlap{
   min-height:100dvh;
   display:grid;
-  grid-template-columns: 1.1fr 1fr;     /* photos | text */
+  grid-template-columns: 1.1fr 1fr;   /* photos | text */
   gap:clamp(24px,5vw,56px);
   align-items:center;
   padding:clamp(24px,6vw,72px);
@@ -24,7 +25,7 @@
   overflow:hidden;
 }
 
-/* LEFT: overlapping photos */
+/* LEFT: overlapping portraits */
 .hero-media{
   position:relative;
   height:min(560px,70vh);
@@ -34,7 +35,7 @@
 .photo{
   position:absolute;
   width:58%;
-  aspect-ratio:3/4;             /* portrait ratio */
+  aspect-ratio:3/4;
   object-fit:cover;
   border-radius:14px;
   border:2px solid rgba(255,255,255,.7);
@@ -43,12 +44,10 @@
 }
 .photo.p1{ left:0;   top:0;   transform:rotate(-4deg); z-index:2; }
 .photo.p2{ right:2%; bottom:0; transform:rotate(5deg);  z-index:1; }
-
-/* subtle parallax on hover */
 .hero-media:hover .p1{ transform:rotate(-3deg) translateY(-4px); }
 .hero-media:hover .p2{ transform:rotate(4deg)  translateY(4px); }
 
-/* RIGHT: text card like in your preview */
+/* RIGHT: text card */
 .hero-info{
   background:var(--glass);
   border:1px solid var(--border);
@@ -68,14 +67,14 @@
   padding:0; margin:0 0 18px;
   color:var(--muted); font-weight:600;
 }
-.hero-bullets li{ display:flex; align-items:center; gap:10px; margin:6px 0; }
+.hero-bullets li{ margin:6px 0; }
 
-/* Buttons + socials */
+/* Buttons + socials (shared styles) */
 .hero-actions{ display:flex; gap:12px; flex-wrap:wrap; margin:8px 0 12px; }
 .btn{
   display:inline-flex; align-items:center; gap:10px;
-  padding:12px 18px; border-radius:12px;
-  border:1px solid transparent; text-decoration:none; font-weight:700;
+  padding:12px 18px; border-radius:12px; font-weight:700;
+  text-decoration:none; border:1px solid transparent;
   transition:transform .12s ease, box-shadow .12s ease, filter .12s ease;
 }
 .btn:hover{ transform:translateY(-2px); box-shadow:0 12px 24px rgba(0,0,0,.25); }
@@ -98,9 +97,9 @@
   color:#fff;
 }
 
-/* Responsive: stack */
+/* RESPONSIVE */
 @media (max-width:980px){
-  .hero-overlap{ grid-template-columns:1fr; }
+  .hero.hero-overlap{ grid-template-columns:1fr; }
   .hero-info{ text-align:center; }
   .hero-media{ height:56vh; }
   .photo{ width:64%; }
