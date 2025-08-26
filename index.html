@@ -9,22 +9,30 @@
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <div class="hero-content">
-      <img src="assets/profile.png" alt="Nica Genessi Viñas" class="hero-pic">
-      <h1>Nica Genessi Viñas</h1>
-      <p>💻 App & Web Developer | Data Analytics Enthusiast</p>
-      <div class="buttons">
-        <a href="#projects" class="btn">View My Work</a>
-        <a href="Nica_Genessi_Vinas_CV.pdf" class="btn secondary" download>Download Resume</a>
+  <!-- HERO (single combined portrait) -->
+  <header class="hero hero-single">
+    <div class="hero-media">
+      <!-- use your combined image here -->
+      <img src="assets/hero-pics.png" alt="Nica Genessi Viñas" class="hero-pic">
+    </div>
+
+    <div class="hero-info">
+      <h1 class="hero-title">Nica Genessi Viñas</h1>
+      <p class="hero-tagline">💻 App & Web Developer · 📊 Data Analytics Enthusiast</p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-eye"></i> View My Work</a>
+        <a href="Nica_Genessi_Vinas_CV.pdf" class="btn btn-ghost" download>
+          <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+        </a>
       </div>
-      <div class="socials">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="mailto:vinasnicagenessi@gmail.com"><i class="fas fa-envelope"></i></a>
+
+      <div class="hero-socials">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/nicagenessivinas-collab" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:vinasnicagenessi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </header>
@@ -46,18 +54,18 @@
     <h2>Featured Projects</h2>
     <div class="projects">
       <div class="project">
-        <img src="project1.jpg" alt="Intelligent Document Collator">
+        <img src="assets/project1.jpg" alt="Intelligent Document Collator">
         <h3>Intelligent Document Collator</h3>
-        <p>Automated document sorting with OCR, file renaming, and GUI integration. 
+        <p>Automated document sorting with OCR, file renaming, and GUI integration.
            Combines Arduino/ESP32 with Python automation for document management.</p>
-        <a href="#" class="btn small">View Project</a>
+        <a href="#" class="btn small btn-primary">View Project</a>
       </div>
       <div class="project">
-        <img src="project2.jpg" alt="Food Recommendation App">
+        <img src="assets/project2.jpg" alt="Food Recommendation App">
         <h3>Food Recommendation App</h3>
-        <p>A Java & C++ app with database integration for booking and recommendations. 
+        <p>A Java & C++ app with database integration for booking and recommendations.
            Includes user-friendly interface and local storage management.</p>
-        <a href="#" class="btn small">View Project</a>
+        <a href="#" class="btn small btn-primary">View Project</a>
       </div>
     </div>
   </section>
@@ -66,7 +74,7 @@
   <section id="about">
     <h2>About Me</h2>
     <div class="about-container">
-      <img src="profile.jpg" alt="Nica Genessi Viñas" class="profile-pic">
+      <img src="assets/profile.png" alt="Nica Genessi Viñas" class="profile-pic">
       <p>I'm a Computer Engineering student and aspiring App & Web Developer with a passion for
          creating functional, user-friendly applications and websites. I enjoy data analytics,
          turning raw data into actionable insights, and designing clean, professional UIs.</p>
@@ -85,10 +93,10 @@
   <section id="college">
     <h2>College Life & Achievements</h2>
     <div class="gallery">
-      <img src="college1.jpg" alt="College Project">
-      <img src="college2.jpg" alt="With Classmates">
-      <img src="college3.jpg" alt="Seminar Participation">
-      <img src="college4.jpg" alt="Certificate of Recognition">
+      <img src="assets/college1.jpg" alt="College Project">
+      <img src="assets/college2.jpg" alt="With Classmates">
+      <img src="assets/college3.jpg" alt="Seminar Participation">
+      <img src="assets/college4.jpg" alt="Certificate of Recognition">
     </div>
   </section>
 
@@ -106,5 +114,3 @@
 
 </body>
 </html>
-
-
