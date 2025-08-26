@@ -2,25 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nica Genessi Viñas | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/6d1f3cf1f8.js" crossorigin="anonymous"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HERO: overlapping two portraits -->
-  <header class="hero hero-overlap">
-    <!-- LEFT: overlapping portraits -->
+  <!-- ===== HERO (Single combined portrait + card) ===== -->
+  <header class="hero hero-simple">
     <div class="hero-media">
-      <img src="assets/2.png" alt="Portrait 1 of Nica Genessi Viñas" class="photo p1">
-      <img src="assets/3.png" alt="Portrait 2 of Nica Genessi Viñas" class="photo p2">
+      <!-- Your edited image with two portraits inside -->
+      <img src="assets/Hero-Pic.png" alt="Nica Genessi Viñas" class="hero-pic" />
     </div>
 
-    <!-- RIGHT: text card -->
     <div class="hero-info">
       <h1 class="hero-title">Nica Genessi Viñas</h1>
-
       <ul class="hero-bullets">
         <li>💻 App & Web Developer</li>
         <li>📊 Data Analytics Enthusiast</li>
@@ -35,6 +39,7 @@
 
       <div class="hero-socials">
         <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/nicagenessivinas-collab" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="mailto:vinasnicagenessi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
@@ -42,80 +47,107 @@
     </div>
   </header>
 
-  <!-- SKILLS / TECH STACK -->
-  <section id="skills">
-    <h2>Skills & Tech Stack</h2>
-    <div class="skills-list">
-      <div class="skill"><i class="fab fa-python"></i> Python & Data Analytics</div>
-      <div class="skill"><i class="fab fa-java"></i> Java & C++ App Development</div>
-      <div class="skill"><i class="fas fa-code"></i> HTML, CSS, JS (Web Development)</div>
-      <div class="skill"><i class="fas fa-database"></i> SQL & Database Management</div>
-      <div class="skill"><i class="fas fa-pencil-ruler"></i> UI/UX & Figma</div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Featured Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <img src="assets/project1.jpg" alt="Intelligent Document Collator">
-        <h3>Intelligent Document Collator</h3>
-        <p>Automated document sorting with OCR, file renaming, and GUI integration.
-           Combines Arduino/ESP32 with Python automation for document management.</p>
-        <a href="#" class="btn small btn-primary">View Project</a>
-      </div>
-      <div class="project">
-        <img src="assets/project2.jpg" alt="Food Recommendation App">
-        <h3>Food Recommendation App</h3>
-        <p>A Java & C++ app with database integration for booking and recommendations.
-           Includes user-friendly interface and local storage management.</p>
-        <a href="#" class="btn small btn-primary">View Project</a>
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Skills & Tech Stack</h2>
+      <div class="skills-list">
+        <span class="chip"><i class="fab fa-python"></i> Python & Data Analytics</span>
+        <span class="chip"><i class="fab fa-java"></i> Java & C++</span>
+        <span class="chip"><i class="fas fa-code"></i> HTML · CSS · JS</span>
+        <span class="chip"><i class="fas fa-database"></i> SQL & DB Design</span>
+        <span class="chip"><i class="fas fa-pencil-ruler"></i> UI/UX · Figma</span>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT ME -->
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-container">
-      <img src="assets/profile.png" alt="Nica Genessi Viñas" class="profile-pic">
-      <p>I'm a Computer Engineering student and aspiring App & Web Developer with a passion for
-         creating functional, user-friendly applications and websites. I enjoy data analytics,
-         turning raw data into actionable insights, and designing clean, professional UIs.</p>
-    </div>
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
 
-    <h3>My Journey</h3>
-    <ul class="timeline">
-      <li><strong>Year 1:</strong> Started Computer Engineering at SLSU</li>
-      <li><strong>Year 3:</strong> Developed multiple apps & web projects</li>
-      <li><strong>Year 4:</strong> Created Intelligent Document Collator (Thesis)</li>
-      <li><strong>Present:</strong> Building app & web solutions, exploring data analytics</li>
-    </ul>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="card project">
+          <img src="assets/project1.jpg" alt="Intelligent Document Collator" class="project-img" />
+          <div class="project-body">
+            <h3>Intelligent Document Collator</h3>
+            <p>Automated document sorting with OCR, file renaming, and GUI integration. Combines Arduino/ESP32 with Python automation for document management.</p>
+            <div class="project-tags">
+              <span>Python</span><span>OCR</span><span>Automation</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm">View Project</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card project">
+          <img src="assets/project2.jpg" alt="Food Recommendation App" class="project-img" />
+          <div class="project-body">
+            <h3>Food Recommendation App</h3>
+            <p>A Java & C++ app with database integration for booking and recommendations. Includes user-friendly interface and local storage management.</p>
+            <div class="project-tags">
+              <span>Java</span><span>C++</span><span>SQLite</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm">View Project</a>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <!-- COLLEGE LIFE & ACHIEVEMENTS -->
-  <section id="college">
-    <h2>College Life & Achievements</h2>
-    <div class="gallery">
-      <img src="assets/college1.jpg" alt="College Project">
-      <img src="assets/college2.jpg" alt="With Classmates">
-      <img src="assets/college3.jpg" alt="Seminar Participation">
-      <img src="assets/college4.jpg" alt="Certificate of Recognition">
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about">
+        <img src="assets/profile.png" alt="Nica Genessi Viñas portrait" class="about-pic" />
+        <p>
+          I'm a Computer Engineering student and aspiring App & Web Developer with a passion for creating functional, user-friendly applications and websites.
+          I enjoy data analytics, turning raw data into actionable insights, and designing clean, professional UIs.
+        </p>
+      </div>
+
+      <h3 class="subheading">My Journey</h3>
+      <ul class="timeline">
+        <li><strong>Year 1:</strong> Started Computer Engineering at SLSU</li>
+        <li><strong>Year 3:</strong> Developed multiple apps & web projects</li>
+        <li><strong>Year 4:</strong> Created Intelligent Document Collator (Thesis)</li>
+        <li><strong>Present:</strong> Building app & web solutions, exploring data analytics</li>
+      </ul>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <footer>
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:vinasnicagenessi@gmail.com">vinasnicagenessi@gmail.com</a></p>
-    <div class="socials">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="#"><i class="fab fa-github"></i></a>
+  <!-- ===== GALLERY ===== -->
+  <section id="college" class="section alt">
+    <div class="container">
+      <h2 class="section-title">College Life & Achievements</h2>
+      <div class="gallery">
+        <img src="assets/college1.jpg" alt="College Project">
+        <img src="assets/college2.jpg" alt="With Classmates">
+        <img src="assets/college3.jpg" alt="Seminar Participation">
+        <img src="assets/college4.jpg" alt="Certificate of Recognition">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:vinasnicagenessi@gmail.com">vinasnicagenessi@gmail.com</a></p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+      <p class="fine">© <span id="year"></span> Nica Genessi Viñas</p>
     </div>
   </footer>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
