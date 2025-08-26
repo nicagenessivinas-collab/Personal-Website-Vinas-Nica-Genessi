@@ -3,11 +3,13 @@ body { font-family: 'Poppins', sans-serif; background: #0d1b2a; color: white; li
 html { scroll-behavior: smooth; }
 
 /* === HERO === */
-.hero {
-  min-height: 100vh; display: flex; align-items: center; justify-content: center;
-  text-align: center; padding: 20px;
-  background: linear-gradient(135deg, #003049, #007f5f, #00b4d8);
-  background-size: 400% 400%; animation: gradientBG 12s ease infinite;
+.hero-pic {
+  width: 180px;         /* adjust size */
+  height: 180px;        /* make it square */
+  border-radius: 50%;   /* makes it circular */
+  object-fit: cover;    /* crop nicely instead of stretching */
+  margin-bottom: 20px;  /* space under the image */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* optional drop shadow */
 }
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
@@ -71,3 +73,4 @@ h2 { font-size: 2rem; margin-bottom: 40px; }
 footer { text-align: center; padding: 50px 10%; background: #003049; }
 footer a { color: #90e0ef; margin: 0 10px; font-size: 1.3rem; }
 footer a:hover { color: #fff; }
+
