@@ -1,0 +1,6 @@
+# from the repo folder
+mkdir -p assets
+mv /path/to/your/profile.png assets/
+git add assets/
+git commit -m "Add assets with profile image"
+git push origin main
